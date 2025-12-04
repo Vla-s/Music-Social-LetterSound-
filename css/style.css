@@ -8,48 +8,42 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
+  position: relative;
 }
 
 h1 {
-  text-align: center;
-  margin: 20px 0;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
   color: #2c3e50;
+  z-index: 10;
 }
 
-p {
+.content {
+  flex: 1;
+  padding: 60px 20px 0; /* отступ сверху, чтобы не перекрывало h1 */
   text-align: center;
-  margin: 10px 0;
 }
 
-a {
-  color: #3498db;
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: 500;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #2980b9;
-}
-
-footer {
+footer.footer {
   background-color: #34495e;
   color: white;
   text-align: center;
   padding: 20px 0;
-  margin-top: 40px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  margin-top: auto; /* фиксирует подвал внизу */
 }
 
-footer a {
+footer.footer a {
   color: #ecf0f1;
+  margin: 0 15px;
+  text-decoration: none;
 }
 
-footer a:hover {
+footer.footer a:hover {
   color: white;
+  text-decoration: underline;
 }
